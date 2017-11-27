@@ -100,12 +100,7 @@
     </ul>
 </section>
     
-        <section class="comments-block">
-      <button id="show-comments" style="display: none;"><i class="fa fa-comments-o"></i> Add/View Comments</button>
-</section>
-
-<section id="disqus_thread"></section>
-
+        
 <script>
       (function () {
             
@@ -115,10 +110,6 @@
 
             var disqus_loaded = false;
             var disqus_shortname = 'mlrumble';
-            var disqus_button = document.getElementById("show-comments");
-
-            disqus_button.style.display = "";
-            disqus_button.addEventListener("click", disqus, false);
 
             function disqus() {
 
@@ -152,6 +143,7 @@
             }
       })();
 </script>
+
     
 
 
