@@ -101,6 +101,8 @@
 </section>
     
         
+<section id="disqus_thread"></section>
+
 <script>
       (function () {
             
@@ -110,6 +112,10 @@
 
             var disqus_loaded = false;
             var disqus_shortname = 'mlrumble';
+            var disqus_button = document.getElementById("show-comments");
+
+            disqus_button.style.display = "";
+            disqus_button.addEventListener("click", disqus, false);
 
             function disqus() {
 
@@ -128,7 +134,7 @@
                         document.getElementById("show-comments").style.display = "none";
                   }
             }
-            disqus();
+disqus();
             
             var hash = window.location.hash.substr(1);
             if (hash.length > 8) {
