@@ -107,13 +107,13 @@ cd mlrumble;<span style="color:#ae81ff">\
 </span><span style="color:#75715e"></span>hugo new posts/my-first-post.md
 <span style="color:#75715e"># run the server with draft mode enabled
 </span><span style="color:#75715e"></span>hugo server -D</code></pre></div>
-<p>Once done you can see your website up and running at localhost:1313</p>
+<p>Once done you can see your website up and running at <code>localhost:1313</code></p>
 
 <hr />
 
 <h2 id="adding-social-buttons-disqus-ids-or-google-analytics">Adding Social Buttons, Disqus IDs, or Google Analytics:</h2>
 
-<p>Next step is to change the config.toml file to this if you want to use the kiera theme.
+<p>Next step is to change the <em>config.toml</em> file to this if you want to use the kiera theme.
 This step is mainly a little theme specific:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">baseURL <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;http://mlrumble.github.io&#34;</span>
 languageCode <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;en-us&#34;</span>
@@ -140,7 +140,7 @@ googleAnalytics <span style="color:#f92672">=</span> <span style="color:#e6db74"
 
 <h2 id="adding-pages">Adding Pages:</h2>
 
-<p>if you want to add a page about for your website add about.md in the content directory</p>
+<p>if you want to add a page about for your website add <em>about.md</em> in the <kbd>content</kbd>kbd&gt; directory</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">+++<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span>title = &#34;About Hugo&#34;<span style="color:#960050;background-color:#1e0010">
@@ -166,7 +166,7 @@ googleAnalytics <span style="color:#f92672">=</span> <span style="color:#e6db74"
 
 <p>I didn&rsquo;t like the show/hide comments functionality of this theme. So I embedded disqus as default. To do this :</p>
 
-<p>Go to themes/kiera/layouts/partials/disqus.html and change it to:</p>
+<p>Go to <kbd>themes/kiera/layouts/partials/disqus.html</kbd> and change it to:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;comments-block&#34;</span>&gt;&lt;/<span style="color:#f92672">section</span>&gt;
 &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;disqus_thread&#34;</span>&gt;&lt;/<span style="color:#f92672">section</span>&gt;
 &lt;<span style="color:#f92672">script</span>&gt;
@@ -189,7 +189,7 @@ googleAnalytics <span style="color:#f92672">=</span> <span style="color:#e6db74"
 
 <h2 id="change-for-copyright-and-bottom-footer-also-enable-the-atom-feed">Change for Copyright and bottom footer. Also enable the atom feed.</h2>
 
-<p>Go to themes/kiera/layouts/partials/footer.html and change it.:</p>
+<p>Go to <kbd>themes/kiera/layouts/partials/footer.html</kbd> and change it to:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;/<span style="color:#f92672">main</span>&gt;
     &lt;<span style="color:#f92672">footer</span>&gt;
         &lt;<span style="color:#f92672">h6</span>&gt;{{ .Site.Copyright | markdownify }}
@@ -212,7 +212,7 @@ googleAnalytics <span style="color:#f92672">=</span> <span style="color:#e6db74"
 <li>mlrumble/mlrumble.github.io</li>
 </ul>
 
-<p>go to the root folder <em>mlrumble</em> and execute the following commands just once:</p>
+<p>go to the root folder <kbd>mlrumble</kbd> and execute the following commands just once:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git init
 git remote add origin git@github.com:mlrumble/mlrumble.git
 git remote -v
@@ -236,7 +236,7 @@ git push origin master  --force</code></pre></div>
 
 <p>You might not want to write commit messages and everything while working with the blog. just create a file with all the add/commit/push commands and name it deploy.sh</p>
 
-<p>Go back to the root folder <em>mlrumble</em> and create a file named deploy.sh with executable permissions(chmod). Put the following in deploy.sh:</p>
+<p>Go back to the root folder <kbd>mlrumble</kbd> and create a file named deploy.sh with executable permissions(chmod). Put the following in deploy.sh:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 echo -e <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
@@ -266,7 +266,7 @@ git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6
 
 <h2 id="add-a-custom-domain">Add a Custom Domain:</h2>
 
-<p>You will need to buy a domain name. Preferrably by (NameCheap)[<a href="https://namecheap.com/">https://namecheap.com/</a>] - Good provider. Go to Dashboard &gt; Manage domain &gt; Advanced DNS page:</p>
+<p>You will need to buy a domain name. Preferrably by <a href="https://namecheap.com/">NameCheap</a> - Good provider. Go to Dashboard &gt; Manage domain &gt; Advanced DNS page:</p>
 
 
 <figure class="mid">
@@ -286,11 +286,17 @@ git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6
 </figure>
 
 
-<p>You will need three DNS records:
-* A record:@:192.30.252.153
-* A record:@:192.30.252.154
-* CNAME record:www:mlrumble.github.io
-echo &ldquo;$mlrumble.com&rdquo; &gt; static/CNAME</p>
+<p>You will need three DNS records:</p>
+
+<ul>
+<li>A record:@:192.30.252.153</li>
+<li>A record:@:192.30.252.154</li>
+<li>CNAME record:www:mlrumble.github.io</li>
+</ul>
+
+<p>After that run this on command line once in the root directory <kbd>mlrumble</kbd>: <code>echo &quot;$mlrumble.com&quot; &gt; static/CNAME</code></p>
+
+<p>And finally deploy again using: <code>sh deploy.sh</code></p>
 
 <p>You are up and running now. Enjoy!!!</p>
 
