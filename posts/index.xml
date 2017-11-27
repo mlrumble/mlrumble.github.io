@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>How I created this website using Hugo and used a custom domain with github pages</title>
+      <link>http://mlrumble.github.io/posts/blog-created/</link>
+      <pubDate>Mon, 27 Nov 2017 18:06:51 +0530</pubDate>
+      
+      <guid>http://mlrumble.github.io/posts/blog-created/</guid>
+      <description>The first Step: Go to the quickstart tutorial and follow through with the steps. The main steps are:
+brew install hugo # replace with your site name hugo new site mlrumble cd mlrumble;\ git init;\ git submodule add https://github.com/avianto/hugo-kiera.git themes/kiera # create a new post hugo new posts/my-first-post.md # run the server with draft mode enabled hugo server -D   Once done you can see your website up and running at localhost:1313</description>
+    </item>
+    
+    <item>
       <title>My First Post</title>
       <link>http://mlrumble.github.io/posts/my-first-post/</link>
       <pubDate>Mon, 27 Nov 2017 18:06:51 +0530</pubDate>
