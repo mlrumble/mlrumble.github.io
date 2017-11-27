@@ -33,5 +33,14 @@ It makes use of a variety of open source projects including:
  Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
     </item>
     
+    <item>
+      <title>My First Post</title>
+      <link>http://mlrumble.github.io/posts/my-first-post/</link>
+      <pubDate>Mon, 27 Nov 2017 18:06:51 +0530</pubDate>
+      
+      <guid>http://mlrumble.github.io/posts/my-first-post/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
