@@ -6,10 +6,20 @@
     <description>Recent content in Posts on MLRumble</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Nov 2017 18:06:51 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 25 Dec 2017 10:06:51 +0530</lastBuildDate>
     
 	<atom:link href="http://mlrumble.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deep Learning By Andrew NG Course 1 review</title>
+      <link>http://mlrumble.github.io/posts/deeplearning-andrew-1/</link>
+      <pubDate>Mon, 25 Dec 2017 10:06:51 +0530</pubDate>
+      
+      <guid>http://mlrumble.github.io/posts/deeplearning-andrew-1/</guid>
+      <description>Deep Learning Course Structure   I recently completed the first deep learning course by Andrew Ng and I definitely am feeling enlightened. Takes me back to those early days when Andrew came up with his first machine learning course.
+About the course, Andrew has achieved mastery in explaining difficult concepts in an easy to understand way. The nomenclature he follows is different from all other tutorials and courses on the net, and I hope it catches on as it is pretty helpful in understanding all the basic concepts.</description>
+    </item>
     
     <item>
       <title>Using a Solr Service with Python on Mac</title>
