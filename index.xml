@@ -30,6 +30,20 @@
     </item>
     
     <item>
+      <title>asda</title>
+      <link>http://mlrumble.github.io/posts/asda/</link>
+      <pubDate>Mon, 03 Dec 2018 18:30:00 +0000</pubDate>
+      
+      <guid>http://mlrumble.github.io/posts/asda/</guid>
+      <description> python asdas
+```python
+What the heck?
+import sys
+```
+sdfdsaf </description>
+    </item>
+    
+    <item>
       <title>Using a Solr Service with Python on Mac</title>
       <link>http://mlrumble.github.io/posts/using-a-solr-service-with-python-on-mac/</link>
       <pubDate>Tue, 28 Nov 2017 18:06:51 +0530</pubDate>
