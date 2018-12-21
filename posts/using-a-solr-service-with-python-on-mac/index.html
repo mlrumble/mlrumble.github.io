@@ -9,7 +9,7 @@
     <meta content="Using a Solr Service with Python on Mac." property="description">
     <meta content="OSX, Solr, Apache, Python" name="keywords">
     <meta name="author" content="MLRumble">
-    <meta name="generator" content="Hugo 0.31" />
+    <meta name="generator" content="Hugo 0.52" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
@@ -112,12 +112,12 @@
 <h2 id="1-install-solr-server-on-your-laptop">1. Install Solr Server on your Laptop</h2>
 
 <p>I am using a Mac so the simplest way I could do that is by using</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Install Solr Server
-</span><span style="color:#75715e"></span>brew install solr
-<span style="color:#75715e"># Start Solr Server with example configuration
-</span><span style="color:#75715e"></span>solr -e techproducts
-<span style="color:#75715e"># Install solr for Python
-</span><span style="color:#75715e"></span>pip install pysolr</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Install Solr Server</span>
+brew install solr
+<span style="color:#75715e"># Start Solr Server with example configuration</span>
+solr -e techproducts
+<span style="color:#75715e"># Install solr for Python</span>
+pip install pysolr</code></pre></div>
 <p>Running the command <code>solr -e techproducts</code> gives us this message, and a whole lot of other things:</p>
 
 <p><code>
@@ -131,15 +131,15 @@ Now the fun part starts.</p>
 
 <h2 id="2-use-python-to-access-the-solrserver">2. Use python to access the SolrServer</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pysolr
-solr <span style="color:#f92672">=</span> pysolr<span style="color:#f92672">.</span>Solr(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;http://localhost:8983/solr/techproducts&#39;</span>,timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+solr <span style="color:#f92672">=</span> pysolr<span style="color:#f92672">.</span>Solr(<span style="color:#e6db74">&#39;http://localhost:8983/solr/techproducts&#39;</span>,timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
 <span style="color:#75715e"># Clean up the Techproducts Solr Database(if that&#39;s what it is called)</span>
-solr<span style="color:#f92672">.</span>delete(q<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;*:*&#39;</span>)
+solr<span style="color:#f92672">.</span>delete(q<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;*:*&#39;</span>)
 <span style="color:#75715e"># Documents to be indexed. You can get that in any form but</span>
 <span style="color:#75715e"># finally create a list of dicts</span>
-items <span style="color:#f92672">=</span> [{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;1&#34;</span>,<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;title&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;text in action&#34;</span> },{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;2&#34;</span>,<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;title&#34;</span>: <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;text in action party&#34;</span> }]
+items <span style="color:#f92672">=</span> [{<span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,<span style="color:#e6db74">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;text in action&#34;</span> },{<span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;2&#34;</span>,<span style="color:#e6db74">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;text in action party&#34;</span> }]
 <span style="color:#75715e"># Add documents to be indexed on the SolrCore</span>
 solr<span style="color:#f92672">.</span>add(items)
-results <span style="color:#f92672">=</span> solr<span style="color:#f92672">.</span>search(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;party&#39;</span>)
+results <span style="color:#f92672">=</span> solr<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;party&#39;</span>)
 <span style="color:#75715e"># See results</span>
 <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> results
     <span style="color:#66d9ef">print</span> r</code></pre></div>
@@ -162,10 +162,6 @@ results <span style="color:#f92672">=</span> solr<span style="color:#f92672">.</
             <a href="http://mlrumble.github.io/posts/blog-created/"><i class="fa fa-chevron-circle-left"></i> How I created this Website using Hugo and used a custom domain with github pages</a>
         </li>
         
-        
-        <li>
-            <a href="http://mlrumble.github.io/posts/deeplearning-andrew-1/">Deep Learning By Andrew NG Course 1 review <i class="fa fa-chevron-circle-right"></i> </a>
-        </li>
         
     </ul>
 </section>

@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>http://mlrumble.github.io/posts/deeplearning-andrew-1/</loc>
-    <lastmod>2017-12-25T10:06:51+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>http://mlrumble.github.io/posts/using-a-solr-service-with-python-on-mac/</loc>
     <lastmod>2017-11-28T18:06:51+05:30</lastmod>
   </url>
@@ -40,7 +35,7 @@
   
   <url>
     <loc>http://mlrumble.github.io/posts/</loc>
-    <lastmod>2017-12-25T10:06:51+05:30</lastmod>
+    <lastmod>2017-11-28T18:06:51+05:30</lastmod>
     <priority>0</priority>
   </url>
   
